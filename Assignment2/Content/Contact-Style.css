@@ -1,0 +1,135 @@
+﻿/*body {
+    margin: 0;
+    padding: 0;
+}
+
+.page-title {
+    width: 100%;
+    text-align: center;
+    background: url('/Content/Picture/Contact.jpg') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-center {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 50px;
+    text-align: center !important;
+}
+
+.text-center h1 {
+    font-family: "Bitter", serif;
+    font-weight: 900;
+    line-height: 1.2;
+    font-size: 3.25rem;
+}
+.text-center p{
+    font-size:16px;
+}*/
+.tabulation {
+    padding-bottom: 80px;
+    display: block;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    /*margin: 0 auto;*/
+    display: flex;
+    flex-wrap: wrap;
+/*    margin: -15px;*/
+}
+.tabulation >.column {
+    flex: none;
+    width: 100%;
+    padding:15px;
+}
+.tabulation, ::after, ::before {
+    box-sizing: inherit;
+}
+.tabulation > .column > form {
+    display: block;
+    margin-top: 0em;
+}
+.tabulation > .column > form > span {
+    color: #f89d35;
+    font-style: inherit;
+    font-weight: inherit;
+}
+.tabulation >.column > form > h3 {
+    font-size: 2.25rem;
+    line-height: 1.6;
+    font-family: "Bitter", serif;
+    font-weight: 900;
+    color: #ffffff;
+}
+/*.column is-gapless {
+    margin-bottom: 1.5rem;
+    display: flex;
+}*/
+.tabulation > .column > form >.multiline {
+    margin-bottom: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+.tabulation >.column>form >.multiline > .desktop {
+    flex: none;
+    padding: 15px;
+    width: 45%;
+}
+.tabulation >.column>form >.multiline > .desktop > label {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0.7;
+    margin-bottom: 10px;
+    display: inline-block;
+    cursor: default;
+}
+.tabulation >.column >form >.multiline > .desktop > input {
+    height: 48px;
+    background: #f7f9f3;
+    border: 1px solid #EEF2F6;
+    box-shadow: none;
+    width: 100%;
+}
+.tabulation > .column >form >.multiline >.columns> button {
+    border-radius: 0.25rem !important;
+    background: #f89d35;
+    border-color: #f89d35;
+    color: #fff;
+    transition: all 0.2s ease;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.tabulation >.column >form >.multiline >.columns{
+    flex: none;
+    width: 100%;
+    padding: 15px;
+}
+.tabulation >.column >form >.multiline >.columns > label{
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0.7;
+    margin-bottom: 10px;
+    display: inline-block;
+    cursor: default;
+}
+.tabulation >.column >form >.multiline >.columns > textarea{
+    height: auto;
+    background: #f7f9f3;
+    border: 1px solid #EEF2F6;
+    box-shadow: none;
+    width: 100%;
+
+}

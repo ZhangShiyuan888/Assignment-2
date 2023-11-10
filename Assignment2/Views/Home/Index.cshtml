@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<head>
+    <link rel="stylesheet" href="~/Content/StyleSheet1.css" />
+    <script src="~/Scripts/Home-changePage.js"></script>
+</head>
+
+<main>
+    <h1>WATCH THE TRAILER</h1>
+    <hr />
+    <video loop="loop" controls="controls" poster="~/Content/Picture/HOME大图.jpg">
+        <source src="~/Content/Video/宣传视频.MP4" type="video/mp4" />
+    </video>
+    <h1>ABOUT THE FILM</h1>
+    <hr />
+    <middle>
+        <left>
+            <img src="~/Content/Picture/海报.jpg" alt="Poster" />
+        </left>
+        <right>
+            <h2>Farewell My Concubine</h2>
+            <p>
+                《Farewell My Concubine》 is a literary film produced by Tomson Film Co., LTD., adapted from Li Bihua's novel of the same name, directed by Chen Kaige, written by Li Bihua and Reed, and starring Leslie Cheung, Gong Li and Zhang Fengyi.
+            </p>
+            <p>
+                The film revolves around the grief and joy of two Peking Opera actors in half a century, showing the reflection and understanding of traditional culture, human existence and human nature.
+            </p>
+        </right>
+    </middle>
+    <h1>SHORT COMMENT</h1>
+    <hr />
+    <div class="comment">
+        <div class="row">
+            <div class="page" id="page1">
+                <div class="card">
+                    <div class="blockquote">
+                        <p>Chen Kaige could have lived on it for two lifetimes, and now it seems justifiable that the river has run out of steam.</p>
+                    </div>
+                    <div class="message">
+                        <img src="~/Content/Picture/momo.jpg" alt="momo" />
+                        <p>momo</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="blockquote">
+                        <p>I thought this was the beginning of domestic movies, who knew it was the end.</p>
+                    </div>
+                    <div class="message">
+                        <img src="~/Content/Picture/艾小柯.jpg" alt="艾小柯" />
+                        <p>Xiaoke Ai</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="blockquote">
+                        <p>This one, giving it five stars isn't enough, but I wouldn't dare watch it again.</p>
+                    </div>
+                    <div class="message">
+                        <img src="~/Content/Picture/石头星.jpg" alt="石头星" />
+                        <p>Rock Star</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page" id="page2" style="display: none;">
+                <div class="card">
+                    <div class="blockquote">
+                        <p>The theme in the background music at the end reveals - who ruined the play, who ruined the exquisite classical culture of China.</p>
+                    </div>
+                    <div class="message">
+                        <img src="~/Content/Picture/Pearciac.jpg" alt="Pearciac" />
+                        <p>Pearciac</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="blockquote">
+                        <p>Thanks to director Chen Kaige's classic work, Jiang Wenli appeared in just a few minutes, out of the heartache and helplessness of the dusty women of that era.</p>
+                    </div>
+                    <div class="message">
+                        <img src="~/Content/Picture/铃铛.jpg" alt="铃铛" />
+                        <p>Little Bell</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="blockquote">
+                        <p>I always thought it was a story about same-sex love and separation, but I didn't realize it was really a sad song about the flood of times and betrayal.</p>
+                    </div>
+                    <div class="message">
+                        <img src="~/Content/Picture/DarthLili.jpg" alt="DarthLili" />
+                        <p>DarthLili</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled" id="previousButton">
+                <a class="page-link">Previous</a>
+            </li>
+            <li class="page-item" id="nextButton">
+                <a class="page-link">Next</a>
+            </li>
+        </ul>
+    </nav>
+</main>

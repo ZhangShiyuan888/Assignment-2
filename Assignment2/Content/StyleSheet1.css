@@ -1,0 +1,148 @@
+﻿body {
+    background-color: #50504e;
+}
+
+main > h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: white;
+    opacity: 0.8;
+}
+main > video{
+    display:flex;
+    justify-content:center;
+    align-content:center;
+    width:1000px;
+    margin:0 auto;
+}
+main > middle {
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    margin: 0 auto;
+    width: auto;
+    align-items: center !important;
+    display:flex;
+}
+main > middle > left{
+    width: 33.33333%;
+    margin-left:200px;
+
+}
+main > middle > left > img{
+    width:80%;
+    height:400px;
+}
+main > middle > right{
+    width: 66.66667%;
+    margin-right:280px;
+
+}
+main > middle > right >h2{
+    font-size: 30px;
+    line-height: 50px;
+}
+ h2{
+    font-family: "Arial", serif;
+    font-weight: 900;
+    color: white;
+    opacity:0.8;
+}
+
+main > middle > right > p {
+    margin-bottom: 1.5rem !important;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    line-height: 1.7;
+    font-family: "Arial", sans-serif;
+    font-size: 20px;
+    color:white;
+    opacity:0.8;
+}
+main > hr {
+    border-top: 5px solid #f89d35;
+    border-radius: 5px;
+    opacity: 0.9;
+    width: 100px;
+    position: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-bottom: 50px;
+}
+.comment {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    gap: 30px;
+    padding: 10px;
+}
+
+.comment .row {
+    margin: 10px 100px;
+}
+.comment .row .page{
+    display: flex;
+    justify-content: space-between; /* Adjust this based on your preference */
+}
+
+.comment .row .page .card {
+
+    background-color:#302e2a;
+    width: 30%; /* Adjust the width based on your preference */
+    margin: 10px; /* Adjust the margin based on your preference */
+    border: none;
+}
+.comment .row  .page .card .blockquote{
+    text-align:center;
+    margin:8px;
+    height:60%;
+    font-size: 18px;
+    font-family: "Arial";
+    color: white;
+    opacity: 0.7;
+}
+/*伪元素给card添加冒号*/
+.comment .row  .page .card .blockquote ::before{
+    content: open-quote;
+    font-size: 50px;
+    color:#f89d35;
+    line-height: .8;
+    padding-top: 8px;
+    font-weight: 600;
+    display: inline-block;
+}
+.comment .row  .page .card .blockquote ::after{
+    color:#f89d35;
+    content: close-quote;
+    font-size: 25px;
+}
+
+.comment .row  .page .card .message {
+    margin: 10px;
+    height: 40%;
+    display: flex;
+}
+.comment .row  .page .card .message >img{
+    width:20%;
+    height:70px;
+    border-radius: 50%; 
+}
+.comment .row  .page .card .message > p{
+    width:80%;
+    text-align:center;
+    font-family: "Arial", serif;
+    font-weight: 600;
+    color: white;
+    opacity:0.6;
+    font-size:30px;
+}
+
+
+
+
+

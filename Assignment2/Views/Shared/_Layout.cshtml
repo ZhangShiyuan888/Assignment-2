@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 我的 ASP.NET 应用程序</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/Scripts/MyJavaScript.js"></script>
+    <script src="~/Scripts/check.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm" style="background-image: url('/Content/Picture/导航栏.png') ;">
+        <div class="container">
+            <div id="Farewell">
+                @Html.ActionLink("Farewell My Concubine |  ", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+            </div>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="切换导航" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li>@Html.ActionLink("HOME", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("ABOUT", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("DETAILS", "Details", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    @*<li>@Html.ActionLink("PHOTOS AND MUSIC", "Photos", "Home", new { area = "" }, new { @class = "nav-link" })</li>*@
+                    <li>@Html.ActionLink("PHOTOS AND MUSIC", "Index", "Categories", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("MORE INFORMATION", "Index", "Products", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("CONTACT", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                </ul>
+                <div class="search-title">
+                    @using (Html.BeginForm("Index", "Products", FormMethod.Get, new { @class = "navbar-form navbar-left" }))
+                    {
+                        <div class="form-group">
+                            @Html.TextBox("Search", null, new { @class = "form-control", @placeHolder = "Srearch Products" })
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    }
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <img src="~/Content/Picture/HOME.png" alt="mainPicture" />
+    <div class="containers">
+        @RenderBody()
+        <footer>
+            <div class="container-4">
+                <div class="column1">
+                    <h3>Company</h3>
+                    <p>Hrbut,Hongqiao District,Tianjin City,300000</p>
+                    <ul>
+                        <li>
+                            <a href="tel:+18033702637">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16" color=#f89d35>
+                                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                </svg>
+                                "18033702637"
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:sgreer@example.com/harpe">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16" color=#f89d35>
+                                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                                </svg>
+                                "695628449@qq.com"
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="column2">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li>@Html.ActionLink("HOME", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("ABOUT", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("DETAILS", "Details", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("PHOTOS AND MUSIC", "Index", "Categories", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("MORE INFORMATION", "Index", "Products", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("CONTACT", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    </ul>
+
+                </div>
+                <div class="column3">
+                    <h3>Subscribe Us</h3>
+                    <p>Subscribe to get latest news article and resources</p>
+                    <from actions="#">
+                        <input type="text" class="input-text" id="content" placeholder="Subscribe Now..." />
+                        <input type="button" class="button" onclick="myFunction()" value="Subscribe" />
+                    </from>
+                    <h3>Validator Detection</h3>
+                    <ul>
+                        <li><a href="https://validator.w3.org/docs/users.html#Calling" onclick="validateHTML()" target="_blank">W3C Validator API</a></li>
+                        <li><a href="https://jigsaw.w3.org/css-validator/manual.html" onclick="validateCSS()" target="_blank">CSS Validator</a></li>
+                    </ul>
+                </div>
+                <div class="column4">
+                    <h3>Gallery</h3>
+                    <div class="gallery">
+                        <img src="~/Content/Picture/footer1.jpg" alt="footer1">
+                        <img src="~/Content/Picture/footer2.jpg" alt="footer2">
+                        <img src="~/Content/Picture/footer3.jpg" alt="footer3">
+                        <img src="~/Content/Picture/footer4.jpg" alt="footer4">
+                        <img src="~/Content/Picture/footer5.jpg" alt="footer5">
+                        <img src="~/Content/Picture/footer6.jpg" alt="footer6">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+
+</html >

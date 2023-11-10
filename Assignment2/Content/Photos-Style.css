@@ -1,0 +1,72 @@
+﻿/*body{
+
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    color: white;
+    opacity: 0.8;
+}
+h2 {
+    font-size: 30px;
+    line-height: 50px;
+}
+h1, h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    color: white;
+    opacity: 0.8;
+}
+hr {
+    border-top: 5px solid #f89d35;
+    border-radius: 5px;
+    opacity: 0.9;
+    width: 100px;
+    position: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-bottom: 50px;
+}
+.first {
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    margin: 0 auto;
+    width: auto;
+    align-items: center !important;
+    display: flex;
+}
+.first> left{
+    width: 33.33333%;
+    margin-left:200px;
+
+}
+.first > left > img{
+    width:80%;
+    height:400px;
+}
+.first > right {
+    width: 66.66667%;
+    margin-right: 280px;
+}
+
+.first > right > ul > li {
+    margin-bottom: 1.5rem !important;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    line-height: 1.7;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    color:white;
+    opacity:0.8;
+    list-style:none;
+}
+
+*/

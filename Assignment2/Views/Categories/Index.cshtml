@@ -1,0 +1,111 @@
+﻿@model IEnumerable<Assignment2.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+}
+<head>
+    <script src="~/Scripts/Category-changePicture.js"></script>
+    <link rel="Category-Style" href="~/Content/Category-Style.css" />
+</head>
+<body>
+    <h1>STAGE PHOTO FOR MOVIE</h1>
+    <hr />
+    <div class="shell">
+        <ul class="images">
+            <li class="img"></li>
+            <li class="img"></li>
+            <li class="img"></li>
+            <li class="img"></li>
+            <li class="img"></li>
+        </ul>
+        <ul class="min">
+            <li class="m"></li>
+            <li class="m"></li>
+            <li class="m"></li>
+            <li class="m"></li>
+            <li class="m"></li>
+        </ul>
+        <div class="two-button">
+            <div class="button-left">&lt;</div>
+            <div class="button-right">&gt;</div>
+        </div>
+    </div>
+    <div class="bg"></div>
+    <h1>MUSIC SOUNDTRACK</h1>
+    <hr />
+    <div class="singer">
+        @foreach (var item in Model)
+        {
+            <div class="both">
+                <img src="@item.ImageUrl" />
+                <div id="singer-link">
+                    @Html.ActionLink(item.Name, "Index", "Products", new { Category = item.Name}, new { @class = "nav-link" })
+                </div>
+            </div>
+        }
+    </div>
+</body>
+<script>
+    //Photos页面的carousel
+
+    let left = document.querySelector(".button-left")
+    let right = document.querySelector(".button-right")
+    let m = document.querySelectorAll(".m")
+    let images = document.querySelector(".images")
+    let index = 0
+    let time
+    function position() {
+        images.style.left = (index * -100) + "%"
+    }
+
+    function add() {
+        if (index >= m.length - 1) {
+            index = 0
+        } else {
+            index++
+        }
+    }
+    function desc() {
+        if (index < 1) {
+            index = m.length - 1
+        } else {
+            index--
+        }
+    }
+    function timer() {
+        time = setInterval(() => {
+            index++
+            desc()
+            add()
+            position()
+        }, 3000)
+    }
+    left.addEventListener("click", () => {
+        desc()
+        position()
+        clearInterval(time)
+        timer()
+    })
+    right.addEventListener("click", () => {
+        add()
+        position()
+        clearInterval(time)
+        timer()
+    })
+    for (let i = 0; i < m.length; i++) {
+        m[i].addEventListener("click", () => {
+            index = i;
+            position();
+            clearInterval(time)
+            timer()
+        })
+    }
+</script>
+
+
+
+
+
+
+
+

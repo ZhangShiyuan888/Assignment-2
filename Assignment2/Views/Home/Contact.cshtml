@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<head>
+    <link rel="stylesheet" href="~/Content/Contact-Style.css" />
+</head>
+<body>
+    @*<section class="page-title">
+        <div class="text-center">
+            <p>contact us</p>
+            <h1>Get in Touch</h1>
+        </div>
+    </section>*@
+    <sction class="tabulation">
+        <div class="column">
+            <form>
+                <span>Send a message</span>
+                <h3>Contact Form</h3>
+                @*<div class="column is-gapless ">
+                    <div class="column is-12">
+                        <div class="message is-primary contact_msg" style="display:none">
+                            <div class="message-body">"Your message was sent successfully."</div>
+                        </div>
+                    </div>
+                </div>*@
+            <div class="multiline">
+                <div class="desktop">
+                    <label>Your Name *</label>
+                    <input name="name" type="text" class="input" />
+                </div>
+                <div class="desktop">
+                    <label>Your Email *</label>
+                    <input name="email" type="email" class="input" />
+                </div>
+                <div class="desktop">
+                    <label>Your Subject *</label>
+                    <input name="subjecte" type="text" class="input" min="0"/>
+                </div>
+                <div class="desktop">
+                    <label>Your Phone Number *</label>
+                    <input name="phone" type="number" class="input" />
+                </div>
+                <div class="columns">
+                    <label>Your Message *</label>
+                    <textarea name="message" class="input" rows="6"></textarea>
+                </div>
+                <div class="columns">
+                    <button class="btn btn-main is-rounded" name="submit" type="submit">Send Message</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </sction>
+
+</body>

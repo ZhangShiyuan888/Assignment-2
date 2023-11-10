@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<head>
+    <link rel="stylesheet" href="~/Content/About-Style.css" />
+</head>
+<body>
+    <h1>ROLE INTRODUCTION</h1>
+    <hr />
+    @if (Model != null)
+    {
+        <div class="introduce">
+            @foreach (var index in Model)
+            {
+                <div class="card">
+                    <div>
+                        <img src="@index.ImageUrl" alt="Image" />
+                        <ul>
+                            <li><strong>Name :</strong> @index.Name</li>
+                            <li><strong>Role :</strong> @index.Role</li>
+                            <li><strong>Dub :</strong> @index.Dub</li>
+                        </ul>
+                    </div>
+                    <p style="text-indent:25px;">@index.Intro</p>
+                </div>
+            }
+        </div>
+
+    }
+    else
+    {
+        <p>No Date found</p>
+    }
+    <h1>MORE INFORMATION</h1>
+    <hr />
+    <div class="about-row">
+        <div class="col-3">
+            <div id="list-example" class="list-group">
+                <a class="list-group-item list-group-item-action" href="#list-item-1" style="border">Major Awards</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-2">Phogallery</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-3">Re-screening Date</a>
+            </div>
+        </div>
+        <div class="col-8">
+            <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                
+                <h4 id="list-item-1">Major Awards</h4>
+                <ul>
+                    <li>Palme d'Or at the 46th Cannes International Film Festival</li>
+                    <li>Golden Globe Award for Best Foreign Language Film, 51st American Film Awards</li>
+                    <li>Best Foreign Language Film, 47th British Academy Film Awards</li>
+                    <li>Nominated for Best Foreign Language Film at the 66th Academy Awards</li>
+                    <li>Best Foreign Language Film, 15th Cheongryong Awards, Korea</li>
+                </ul>
+                
+                <h4 id="list-item-2">Phogallery</h4>
+                <p>In domestic film festivals, Zhang Guorong did not get any nominations due to political factors: in Mainland China "Farewell My Concubine" was first completely banned due to the Cultural Revolution plot, and was only allowed to be released after it won the award in Cannes, but it could not participate in the Golden Rooster and Hundred Flowers awards and other awards. 
+                In Taiwan, Farewell My Concubine was classified as a mainland movie and could not participate in the Golden Horse Awards. In Hong Kong, "Farewell My Concubine" was not banned, but it was not considered a Hong Kong movie and could not participate in the Golden Film Awards.</p>
+                <p>Dieyi quit smoking section, the first shot after Chen Kaige said can, Zhang Guorong is not satisfied, to re-shoot again. After several consecutive shots, he smashed the glass smashed too hard as a result of the fingers cut off a piece of meat, everyone is very nervous, he smiled and said it's okay, this time finally shot well.</p>
+                <p>Leslie Cheung lost out on the Cannes Film Prize by one vote. There were two main reasons for this: one was that Farewell My Concubine had already won the Palme d'Or, the highest honor of that year's Cannes International Film Festival, and the jury wanted to give the other important award (Cannes Film Emperor) to another outstanding film; the other was that an Italian jury member named Claudia Cardinale intentionally gave Zhang a vote for Best Actress.</p>
+                
+                <h4 id="list-item-3">Re-screening Date</h4>
+                <p><strong>On March 3, 2020</strong>, the movie revealed the trailer for the Korean re-release. The movie is 171 minutes long and will be re-released on April 1 in South Korea. Previously, the film had been scheduled for March 25, which was later adjusted to the day of the 17th anniversary (April 1) of Leslie Cheung's death. </p>
+                <p><strong>On April 17</strong>, it was reported that the restored version of the film Farewell My Concubine was re-scheduled for a May 1 re-release in South Korea, with an updated poster. The film was originally scheduled to be re-released in South Korea on April 1 to commemorate the 17th anniversary of Zhang's death before it was pulled due to the epidemic. </p>
+                <p><strong>On June 3, 2022</strong>, Farewell My Concubine had its final screening in Japan.</p>
+                <p><strong>On April 1, 2023</strong>, Farewell My Concubine was re-released in South Korea to commemorate the 20th anniversary of Leslie Cheung's death.In August, a teaser trailer and poster were released, and it was announced that a 4K remastered version of the film would be screened at the Tribune Theatre in New York City, USA, on September 22, followed by a small expansion.
+                On September 30, the Hong Kong Film Archive will present a 4K remastered version of Farewell My Concubine in the Grand Theatre of the Hong Kong Cultural Centre.</p>
+            </div>
+        </div>
+    </div>
+</body>

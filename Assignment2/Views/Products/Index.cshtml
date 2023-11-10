@@ -1,0 +1,68 @@
+﻿@*@model IEnumerable<Assignment2.Models.Product>*@
+@model Assignment2.Models.ProductIndexViewModel
+@using PagedList.Mvc
+
+@{
+    //ViewBag.Title = "Index";
+    ViewBag.Title = "Products";
+}
+<head>
+    <link rel="Product-Style" href="~/Content/Product-Style.css" />
+</head>
+<body>
+    <h1>MORE INFORMATION</h1>
+    <hr />
+    <h2>
+        @(String.IsNullOrWhiteSpace (Model.Search) ? "Showing all" : "You search for " + Model.Search + " found")
+        @Model.Products.TotalItemCount products
+    </h2>
+    <div id="creat-link">
+        @Html.ActionLink("Create New", "Create", new { area = "" }, new { @class = "nav-link" })
+    </div>
+    <div class="option">
+        @using (Html.BeginForm("Index", "Products", FormMethod.Get))
+        {
+            <label>Filter by singer:</label>
+            @Html.DropDownListFor(vm => vm.Category, Model.CatFilterItems, "All");
+            <label>Sort by:</label>
+            @Html.DropDownListFor(vm => vm.SortBy, new SelectList(Model.Sorts, "Value", "Key"), "Default")
+            <input type="submit" value="Filter" />
+            <input type="hidden" name="Search" id="Search" value="@Model.Search" />
+        }
+    </div>
+    <table class="table table-hover">
+        <tr>
+            <th>Singer</th>
+            <th>Film score</th>
+            <th>Nation</th>
+            <th>Release date</th>
+            <th>Modifications</th>
+        </tr>
+
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Category.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                <td style="color:white;">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "link" }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "link" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @class = "link" })
+                </td>
+            </tr>
+        }
+    </table>
+    <div class="page-down">
+        Page @(Model.Products.PageCount <Model.Products.PageNumber ? 0 : Model.Products.PageNumber) of @Model.Products.PageCount
+    </div>
+    <div class="btn-group" role="group" aria-label="Basic example">
+        @for (int i = 1; i <= Model.Products.PageCount; i++)
+        {
+            <button type="button" class="btn btn-secondary" >
+                <a href="@Url.Action("Index", new { category = Model.Category, Search = Model.Search, sortBy = Model.SortBy, page = i })" class="btn btn-secondary">@i</a>
+            </button>
+        }
+    </div>
+</body>
